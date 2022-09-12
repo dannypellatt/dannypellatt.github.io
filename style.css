@@ -120,6 +120,13 @@ a:hover {
 #titleImage {
   min-width: 700px;
   max-width: 800px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+
+  #titleImage {display:none;}
+
 }
 
 /* Portfolio Section */
@@ -137,7 +144,7 @@ a:hover {
 .radio_mark {
   text-align: center;
   color: black;
-  width: 250px;
+  max-width: 250px;
   padding: 10px;
 }
 
@@ -179,19 +186,21 @@ a:hover {
 
 .overview {
   display: inline-flex;
-  grid-template-columns: auto auto;
-  padding-right: 100px;
+  flex-wrap: wrap;
+}
+
+.overview > * {
+  flex: 1 1 40%;
+  padding: 2em;
+  margin: .5em;
 }
 
 .overview-left img {
-  padding: 70px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.overview-left img {
-  max-width: 100%;
-  min-width: 400px;
+  padding: 50px;
+  display: block;
+  margin: auto;
+  max-width: 700px;
+  min-width: 250px;
 }
 
 .overview-point img {
@@ -206,9 +215,9 @@ a:hover {
 .overview-point-with-icon {
   display: inline-grid;
   grid-template-columns: auto auto;
+  padding-right: 100px;
+  
 }
-
-
 
 
 #apps, #websites {
@@ -276,15 +285,21 @@ a:hover {
   /* border: 1px solid black; */
   padding: 1rem 1rem;
   text-align: center;
-  height: fit-content;
   background-color: rgb(249, 249, 249);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bio > * {
+  flex: 1 1 40%;
+    padding: 2em;
+    margin: .5em;
 }
 
 .bioSection {
   background-color: rgb(249, 249, 249);
   margin: 10px;
   /* border: 1px solid red; */
-  display: inline-block;
 }
 
 .carousel-caption p {
@@ -311,18 +326,12 @@ a:hover {
 #summary {
   float: left;
   text-align: left;
-  width: 35%;
   padding-left: 40px;
 }
 
 #links ul {
   color: rgb(43, 99, 215);
   text-align: center;
-}
-
-#myStory img {
-  margin: 50px;
-  height: 400px;
 }
 
 .carousel-caption {
@@ -409,6 +418,10 @@ button {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   cursor: pointer;
   border: solid 2px #000;
+}
+
+.gallery img:hover {
+  opacity: 0.5;
 }
 
 #gallery-modal .modal-img {
