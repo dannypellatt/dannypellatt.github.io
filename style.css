@@ -392,6 +392,16 @@ button {
 }
 
 /* Certifications section */
+
+#certifications h3 {
+  font-size: 3.5em;
+}
+
+#certifications p {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
 .gallery h2 {
   text-align: center;
   margin-bottom: 40px;
